@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Search the Commons | Flickr's Public Photo Archive</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Search for public domain images in The Commons, Flickr's public photo archive">
+  <!-- build:css /assets/css/style.min.css -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fluidbox.css">
+  <!-- endbuild -->
+  <link href='http://fonts.googleapis.com/css?family=Quicksand:300,400|Josefin+Sans:300,400' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <div class="full-width">
+      <header class="header" role="banner">
+        <div class="container">
+          <div class="header-inner">
+            <div class="heading"><h1>Search the Commons</h1></div>
+            <p class="lead">Unearth hidden gems from around the world in Flickr's public photo archive.</p>
+            <form name="formSearch" id="form" method="post" role="search" aria-labelledby="searchQuery">
+              <a href="#top" class="scroll-up hidden" title="Scroll to top"><img alt="Up arrow" src="/assets/img/arrow-up.png"></a>
+              <input type="search" id="searchQuery" name="query" class="input" placeholder="Type your search term..." autocapitalize="off" autofocus>
+              <button class="btn" type="submit">Find images</button>
+            </form>
+          </div>
+        </div>
+      </header>
+      <main class="main cf" role="main">
+        <div class="container">
+          <div class="loading"></div>
+          <div class="gallery"></div>
+        </div>
+      </main>
+    </div>
+  <!-- build:js /assets/js/main.min.js -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/masonry.min.js"></script>
+  <script src="js/imagesloaded.min.js"></script>
+  <script src="js/fluidbox.min.js"></script>
+  <script src="js/script.js"></script>
+  <!-- endbuild -->
+</body>
+</html>
