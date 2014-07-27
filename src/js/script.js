@@ -4,6 +4,7 @@
 
   "use strict";
 
+  // Set up variables
   var $window = $(window),
       $body = $('html, body'),
       $header = $('.header-inner'),
@@ -13,6 +14,7 @@
       $input = $form.find('.input'),
       $loading = $('.loading');
 
+  // Process data returned from API
   function processData(data) {
      var status = data.stat.toUpperCase(),
         photos = data.photos.photo,
@@ -40,6 +42,7 @@
     }
   }
 
+  // Make JSONP request
   function queryFlickr(query) {
     var flickrAPI = 'https://api.flickr.com/services/rest/?method=flickr.photos.search',
         APIkey = 'bf221ff37e56f2d668f51d71e164188e',
@@ -57,6 +60,7 @@
 
   }
   
+  // Add Masonry and Fluidbox plugins
   $.fn.revealImages = function($items) {
     var masonry = this.data('masonry'),
         itemSelector = masonry.options.itemSelector;
@@ -82,6 +86,7 @@
     return this;
   };
 
+  // Attach event handlers
   $form.on('submit', function(event) {
     var query = $input.val();
 
@@ -112,6 +117,7 @@
 
   });
 
+  // Initial query
   queryFlickr('nature');
 
 }(window, jQuery, undefined));
