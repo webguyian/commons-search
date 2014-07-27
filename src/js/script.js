@@ -102,7 +102,9 @@
 
   $window.on('scroll', function() {
 
-    if ($window.scrollTop() > 400) {
+    var galleryHeight = $gallery.height();
+
+    if (galleryHeight > 400 && $window.scrollTop() > 400) {
       $header.addClass('header-fixed');
     } else {
       $header.removeClass('header-fixed');
